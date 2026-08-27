@@ -26,5 +26,36 @@ namespace GYM_Management_System
         {
 
         }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            UsernameTb.Text = "";
+            PasswordTb.Text = "";
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (UsernameTb.Text == "" || PasswordTb.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else if (UsernameTb.Text == "Admin" && PasswordTb.Text == "Admin")
+                {
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username & Password");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

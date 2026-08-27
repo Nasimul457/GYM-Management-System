@@ -30,14 +30,14 @@
         {
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            UsernameTb = new TextBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            PasswordTb = new TextBox();
             pictureBox3 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
+            LoginBtn = new Button();
+            ResetBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -65,15 +65,16 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // UsernameTb
             // 
-            textBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(237, 124);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 40);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            UsernameTb.Cursor = Cursors.IBeam;
+            UsernameTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UsernameTb.Location = new Point(237, 124);
+            UsernameTb.Multiline = true;
+            UsernameTb.Name = "UsernameTb";
+            UsernameTb.Size = new Size(262, 40);
+            UsernameTb.TabIndex = 2;
+            UsernameTb.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
@@ -105,14 +106,15 @@
             label3.TabIndex = 5;
             label3.Text = "Password";
             // 
-            // textBox2
+            // PasswordTb
             // 
-            textBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(237, 230);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(262, 40);
-            textBox2.TabIndex = 6;
+            PasswordTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordTb.Location = new Point(237, 230);
+            PasswordTb.Multiline = true;
+            PasswordTb.Name = "PasswordTb";
+            PasswordTb.PasswordChar = '*';
+            PasswordTb.Size = new Size(262, 40);
+            PasswordTb.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -124,47 +126,50 @@
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
             // 
-            // button1
+            // LoginBtn
             // 
-            button1.BackColor = Color.FromArgb(192, 0, 0);
-            button1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(237, 306);
-            button1.Name = "button1";
-            button1.Size = new Size(172, 45);
-            button1.TabIndex = 8;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            LoginBtn.BackColor = Color.FromArgb(192, 0, 0);
+            LoginBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginBtn.ForeColor = Color.White;
+            LoginBtn.Location = new Point(237, 306);
+            LoginBtn.Name = "LoginBtn";
+            LoginBtn.Size = new Size(172, 45);
+            LoginBtn.TabIndex = 8;
+            LoginBtn.Text = "Login";
+            LoginBtn.UseVisualStyleBackColor = false;
+            LoginBtn.Click += LoginBtn_Click;
             // 
-            // button2
+            // ResetBtn
             // 
-            button2.BackColor = Color.FromArgb(192, 0, 0);
-            button2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(442, 306);
-            button2.Name = "button2";
-            button2.Size = new Size(172, 45);
-            button2.TabIndex = 9;
-            button2.Text = "Sign in";
-            button2.UseVisualStyleBackColor = false;
+            ResetBtn.BackColor = Color.FromArgb(192, 0, 0);
+            ResetBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ResetBtn.ForeColor = Color.White;
+            ResetBtn.Location = new Point(442, 306);
+            ResetBtn.Name = "ResetBtn";
+            ResetBtn.Size = new Size(172, 45);
+            ResetBtn.TabIndex = 9;
+            ResetBtn.Text = "Reset";
+            ResetBtn.UseVisualStyleBackColor = false;
+            ResetBtn.Click += ResetBtn_Click;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(ResetBtn);
+            Controls.Add(LoginBtn);
             Controls.Add(pictureBox3);
-            Controls.Add(textBox2);
+            Controls.Add(PasswordTb);
             Controls.Add(label3);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(UsernameTb);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -180,13 +185,13 @@
 
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox UsernameTb;
         private Label label2;
         private PictureBox pictureBox2;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox PasswordTb;
         private PictureBox pictureBox3;
-        private Button button1;
-        private Button button2;
+        private Button LoginBtn;
+        private Button ResetBtn;
     }
 }

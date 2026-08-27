@@ -31,19 +31,18 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             MembersDGV = new DataGridView();
             panel1 = new Panel();
-            ExitBtn = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             BackBtn = new Button();
-            button5 = new Button();
+            SearchBtn = new Button();
             label10 = new Label();
             label9 = new Label();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
-            button4 = new Button();
+            SearchTb = new TextBox();
+            refreshBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)MembersDGV).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -55,7 +54,7 @@
             MembersDGV.BackgroundColor = Color.White;
             MembersDGV.BorderStyle = BorderStyle.Fixed3D;
             MembersDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            MembersDGV.Location = new Point(83, 176);
+            MembersDGV.Location = new Point(21, 185);
             MembersDGV.Name = "MembersDGV";
             MembersDGV.RowHeadersWidth = 51;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -64,33 +63,19 @@
             dataGridViewCellStyle1.ForeColor = Color.DarkRed;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             MembersDGV.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            MembersDGV.Size = new Size(1041, 390);
+            MembersDGV.Size = new Size(1417, 390);
             MembersDGV.TabIndex = 73;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(ExitBtn);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1205, 70);
+            panel1.Size = new Size(1467, 70);
             panel1.TabIndex = 72;
-            // 
-            // ExitBtn
-            // 
-            ExitBtn.BackColor = Color.FromArgb(192, 0, 0);
-            ExitBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ExitBtn.ForeColor = Color.White;
-            ExitBtn.Location = new Point(1154, 0);
-            ExitBtn.Name = "ExitBtn";
-            ExitBtn.Size = new Size(51, 70);
-            ExitBtn.TabIndex = 13;
-            ExitBtn.Text = "X";
-            ExitBtn.UseVisualStyleBackColor = false;
-            ExitBtn.Click += ExitBtn_Click;
             // 
             // pictureBox1
             // 
@@ -107,7 +92,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(363, 9);
+            label1.Location = new Point(559, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(287, 46);
@@ -127,17 +112,18 @@
             BackBtn.UseVisualStyleBackColor = false;
             BackBtn.Click += BackBtn_Click;
             // 
-            // button5
+            // SearchBtn
             // 
-            button5.BackColor = Color.FromArgb(192, 0, 0);
-            button5.Font = new Font("Segoe UI", 12F);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(639, 125);
-            button5.Name = "button5";
-            button5.Size = new Size(172, 45);
-            button5.TabIndex = 70;
-            button5.Text = "Search";
-            button5.UseVisualStyleBackColor = false;
+            SearchBtn.BackColor = Color.FromArgb(192, 0, 0);
+            SearchBtn.Font = new Font("Segoe UI", 12F);
+            SearchBtn.ForeColor = Color.White;
+            SearchBtn.Location = new Point(639, 125);
+            SearchBtn.Name = "SearchBtn";
+            SearchBtn.Size = new Size(172, 45);
+            SearchBtn.TabIndex = 70;
+            SearchBtn.Text = "Search";
+            SearchBtn.UseVisualStyleBackColor = false;
+            SearchBtn.Click += SearchBtn_Click;
             // 
             // label10
             // 
@@ -207,46 +193,49 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DarkRed;
-            label2.Location = new Point(471, 73);
+            label2.Location = new Point(605, 73);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(152, 31);
             label2.TabIndex = 51;
             label2.Text = "Members List";
             // 
-            // textBox1
+            // SearchTb
             // 
-            textBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(314, 130);
-            textBox1.Margin = new Padding(4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(309, 39);
-            textBox1.TabIndex = 74;
+            SearchTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SearchTb.Location = new Point(314, 130);
+            SearchTb.Margin = new Padding(4);
+            SearchTb.Multiline = true;
+            SearchTb.Name = "SearchTb";
+            SearchTb.Size = new Size(309, 39);
+            SearchTb.TabIndex = 74;
             // 
-            // button4
+            // refreshBtn
             // 
-            button4.BackColor = Color.FromArgb(192, 0, 0);
-            button4.Font = new Font("Segoe UI", 12F);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(817, 124);
-            button4.Name = "button4";
-            button4.Size = new Size(172, 45);
-            button4.TabIndex = 75;
-            button4.Text = "Refresh";
-            button4.UseVisualStyleBackColor = false;
+            refreshBtn.BackColor = Color.FromArgb(192, 0, 0);
+            refreshBtn.Font = new Font("Segoe UI", 12F);
+            refreshBtn.ForeColor = Color.White;
+            refreshBtn.Location = new Point(817, 124);
+            refreshBtn.Name = "refreshBtn";
+            refreshBtn.Size = new Size(172, 45);
+            refreshBtn.TabIndex = 75;
+            refreshBtn.Text = "Refresh";
+            refreshBtn.UseVisualStyleBackColor = false;
+            refreshBtn.Click += refreshBtn_Click;
             // 
             // ViewMembers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1205, 663);
-            Controls.Add(button4);
-            Controls.Add(textBox1);
+            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1467, 656);
+            Controls.Add(refreshBtn);
+            Controls.Add(SearchTb);
             Controls.Add(MembersDGV);
             Controls.Add(panel1);
             Controls.Add(BackBtn);
-            Controls.Add(button5);
+            Controls.Add(SearchBtn);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(button3);
@@ -270,18 +259,17 @@
 
         private DataGridView MembersDGV;
         private Panel panel1;
-        private Button ExitBtn;
         private PictureBox pictureBox1;
         private Label label1;
         private Button BackBtn;
-        private Button button5;
+        private Button SearchBtn;
         private Label label10;
         private Label label9;
         private Button button3;
         private Button button2;
         private Button button1;
         private Label label2;
-        private TextBox textBox1;
-        private Button button4;
+        private TextBox SearchTb;
+        private Button refreshBtn;
     }
 }

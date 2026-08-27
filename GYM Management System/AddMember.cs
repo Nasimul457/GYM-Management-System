@@ -16,8 +16,7 @@ namespace GYM_Management_System
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PKE8D82\SQLEXPRESS;Initial Catalog=GymDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PKE8D82\SQLEXPRESS02;Initial Catalog=GYMDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -99,6 +98,11 @@ namespace GYM_Management_System
             MainForm mainFrom = new MainForm();
             mainFrom.Show();
             this.Hide();
+        }
+
+        private void AddMember_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

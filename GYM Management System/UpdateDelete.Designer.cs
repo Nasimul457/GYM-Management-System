@@ -55,6 +55,7 @@
             label2 = new Label();
             MembersDGV = new DataGridView();
             label11 = new Label();
+            Deletebtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MembersDGV).BeginInit();
@@ -79,7 +80,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1205, 70);
+            panel1.Size = new Size(1412, 70);
             panel1.TabIndex = 48;
             // 
             // button7
@@ -87,7 +88,7 @@
             button7.BackColor = Color.FromArgb(192, 0, 0);
             button7.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(1154, 0);
+            button7.Location = new Point(1358, 0);
             button7.Name = "button7";
             button7.Size = new Size(51, 70);
             button7.TabIndex = 13;
@@ -99,36 +100,39 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(363, 9);
+            label1.Location = new Point(514, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(287, 46);
             label1.TabIndex = 1;
             label1.Text = "FITNESS CENTER";
+            label1.Click += label1_Click;
             // 
             // BackBtn
             // 
             BackBtn.BackColor = Color.FromArgb(192, 0, 0);
             BackBtn.Font = new Font("Segoe UI", 12F);
             BackBtn.ForeColor = Color.White;
-            BackBtn.Location = new Point(796, 606);
+            BackBtn.Location = new Point(984, 606);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(151, 45);
             BackBtn.TabIndex = 47;
             BackBtn.Text = "Back";
             BackBtn.UseVisualStyleBackColor = false;
+            BackBtn.Click += BackBtn_Click;
             // 
             // ResetBtn
             // 
             ResetBtn.BackColor = Color.FromArgb(192, 0, 0);
             ResetBtn.Font = new Font("Segoe UI", 12F);
             ResetBtn.ForeColor = Color.White;
-            ResetBtn.Location = new Point(626, 606);
+            ResetBtn.Location = new Point(795, 606);
             ResetBtn.Name = "ResetBtn";
             ResetBtn.Size = new Size(137, 45);
             ResetBtn.TabIndex = 46;
             ResetBtn.Text = "Reset";
             ResetBtn.UseVisualStyleBackColor = false;
+            ResetBtn.Click += ResetBtn_Click;
             // 
             // UpdateMemberBtn
             // 
@@ -208,7 +212,7 @@
             // 
             // TimingCB
             // 
-            TimingCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TimingCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TimingCB.FormattingEnabled = true;
             TimingCB.Items.AddRange(new object[] { "06.00 am - 08:00 am", "08.00 am - 10:00 am", "06.00 am - 08:00 pm", "08.00 am - 10:00 pm" });
             TimingCB.Location = new Point(18, 595);
@@ -219,7 +223,7 @@
             // 
             // GenderCB
             // 
-            GenderCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GenderCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GenderCB.FormattingEnabled = true;
             GenderCB.Items.AddRange(new object[] { "Male", "Female" });
             GenderCB.Location = new Point(15, 416);
@@ -242,7 +246,7 @@
             // 
             // AmountTb
             // 
-            AmountTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AmountTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AmountTb.Location = new Point(15, 499);
             AmountTb.Margin = new Padding(4);
             AmountTb.Multiline = true;
@@ -276,7 +280,7 @@
             // 
             // AgeTb
             // 
-            AgeTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AgeTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AgeTb.Location = new Point(14, 320);
             AgeTb.Margin = new Padding(4);
             AgeTb.Multiline = true;
@@ -298,7 +302,7 @@
             // 
             // PhoneTb
             // 
-            PhoneTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PhoneTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneTb.Location = new Point(15, 233);
             PhoneTb.Margin = new Padding(4);
             PhoneTb.Multiline = true;
@@ -320,7 +324,7 @@
             // 
             // NameTb
             // 
-            NameTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NameTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameTb.Location = new Point(13, 132);
             NameTb.Margin = new Padding(4);
             NameTb.Multiline = true;
@@ -345,7 +349,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DarkRed;
-            label2.Location = new Point(337, 73);
+            label2.Location = new Point(411, 73);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(286, 31);
@@ -354,15 +358,15 @@
             // 
             // MembersDGV
             // 
+            MembersDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             MembersDGV.BackgroundColor = Color.White;
             MembersDGV.BorderStyle = BorderStyle.Fixed3D;
             MembersDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             MembersDGV.Location = new Point(305, 138);
             MembersDGV.Name = "MembersDGV";
             MembersDGV.RowHeadersWidth = 51;
-            MembersDGV.Size = new Size(869, 453);
+            MembersDGV.Size = new Size(1095, 453);
             MembersDGV.TabIndex = 49;
-           
             MembersDGV.CellMouseClick += MembersDGV_CellMouseClick;
             // 
             // label11
@@ -377,11 +381,27 @@
             label11.TabIndex = 50;
             label11.Text = "Click on the Member To Be Deleted";
             // 
+            // Deletebtn
+            // 
+            Deletebtn.BackColor = Color.FromArgb(192, 0, 0);
+            Deletebtn.Font = new Font("Segoe UI", 12F);
+            Deletebtn.ForeColor = Color.White;
+            Deletebtn.Location = new Point(618, 606);
+            Deletebtn.Name = "Deletebtn";
+            Deletebtn.Size = new Size(130, 45);
+            Deletebtn.TabIndex = 51;
+            Deletebtn.Text = "Delete";
+            Deletebtn.UseVisualStyleBackColor = false;
+            Deletebtn.Click += Deletebtn_Click;
+            // 
             // UpdateDelete
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1205, 663);
+            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1412, 663);
+            Controls.Add(Deletebtn);
             Controls.Add(label11);
             Controls.Add(MembersDGV);
             Controls.Add(panel1);
@@ -448,5 +468,6 @@
         private Label label2;
         private DataGridView MembersDGV;
         private Label label11;
+        private Button Deletebtn;
     }
 }

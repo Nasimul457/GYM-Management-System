@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button5 = new Button();
             pictureBox1 = new PictureBox();
             PaymentMember = new Button();
             DeleteMember = new Button();
             AddMember = new Button();
-            UpdateMember = new Button();
+            ViewMember = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -43,30 +42,16 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(button5);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(PaymentMember);
             panel1.Controls.Add(DeleteMember);
             panel1.Controls.Add(AddMember);
-            panel1.Controls.Add(UpdateMember);
+            panel1.Controls.Add(ViewMember);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1184, 70);
             panel1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(192, 0, 0);
-            button5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(1133, -3);
-            button5.Name = "button5";
-            button5.Size = new Size(51, 70);
-            button5.TabIndex = 13;
-            button5.Text = "X";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // pictureBox1
             // 
@@ -83,7 +68,7 @@
             PaymentMember.BackColor = Color.FromArgb(192, 0, 0);
             PaymentMember.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             PaymentMember.ForeColor = Color.White;
-            PaymentMember.Location = new Point(833, 10);
+            PaymentMember.Location = new Point(890, 12);
             PaymentMember.Name = "PaymentMember";
             PaymentMember.Size = new Size(172, 45);
             PaymentMember.TabIndex = 12;
@@ -98,11 +83,11 @@
             DeleteMember.ForeColor = Color.White;
             DeleteMember.Location = new Point(641, 10);
             DeleteMember.Name = "DeleteMember";
-            DeleteMember.Size = new Size(172, 45);
+            DeleteMember.Size = new Size(234, 45);
             DeleteMember.TabIndex = 11;
-            DeleteMember.Text = "Delete";
+            DeleteMember.Text = "Update && Delete";
             DeleteMember.UseVisualStyleBackColor = false;
-            DeleteMember.Click += DeleteMember_Click;
+            DeleteMember.Click += Update_Delete_Click;
             // 
             // AddMember
             // 
@@ -117,25 +102,25 @@
             AddMember.UseVisualStyleBackColor = false;
             AddMember.Click += AddMember_Click;
             // 
-            // UpdateMember
+            // ViewMember
             // 
-            UpdateMember.BackColor = Color.FromArgb(192, 0, 0);
-            UpdateMember.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            UpdateMember.ForeColor = Color.White;
-            UpdateMember.Location = new Point(453, 10);
-            UpdateMember.Name = "UpdateMember";
-            UpdateMember.Size = new Size(172, 45);
-            UpdateMember.TabIndex = 9;
-            UpdateMember.Text = "Update";
-            UpdateMember.UseVisualStyleBackColor = false;
-            UpdateMember.Click += UpdateMember_Click;
+            ViewMember.BackColor = Color.FromArgb(192, 0, 0);
+            ViewMember.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ViewMember.ForeColor = Color.White;
+            ViewMember.Location = new Point(453, 10);
+            ViewMember.Name = "ViewMember";
+            ViewMember.Size = new Size(172, 45);
+            ViewMember.TabIndex = 9;
+            ViewMember.Text = "View Member";
+            ViewMember.UseVisualStyleBackColor = false;
+            ViewMember.Click += View_Member_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 570);
+            button1.Location = new Point(0, 609);
             button1.Name = "button1";
             button1.Size = new Size(172, 45);
             button1.TabIndex = 13;
@@ -152,10 +137,11 @@
             ClientSize = new Size(1184, 654);
             Controls.Add(button1);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+            Load += MainForm_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -167,8 +153,7 @@
         private Button PaymentMember;
         private Button DeleteMember;
         private Button AddMember;
-        private Button UpdateMember;
-        private Button button5;
+        private Button ViewMember;
         private PictureBox pictureBox1;
         private Button button1;
     }

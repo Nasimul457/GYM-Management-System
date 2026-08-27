@@ -28,45 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            button7 = new Button();
+            Exitbtn = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            button4 = new Button();
-            button6 = new Button();
-            button5 = new Button();
+            resetbtn = new Button();
+            Backbtn = new Button();
+            Paybtn = new Button();
             label10 = new Label();
             label9 = new Label();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             label2 = new Label();
-            textBox2 = new TextBox();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            PaymentDate = new DateTimePicker();
             label4 = new Label();
-            textBox3 = new TextBox();
+            AmountTb = new TextBox();
             label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            NameCB = new ComboBox();
+            PaymentDGV = new DataGridView();
+            SearchTb = new TextBox();
+            button4 = new Button();
+            refreshbtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PaymentDGV).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(311, 236);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(847, 308);
-            dataGridView1.TabIndex = 85;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(button7);
+            panel1.Controls.Add(Exitbtn);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -75,17 +68,18 @@
             panel1.Size = new Size(1205, 70);
             panel1.TabIndex = 84;
             // 
-            // button7
+            // Exitbtn
             // 
-            button7.BackColor = Color.FromArgb(192, 0, 0);
-            button7.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(1154, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(51, 70);
-            button7.TabIndex = 13;
-            button7.Text = "X";
-            button7.UseVisualStyleBackColor = false;
+            Exitbtn.BackColor = Color.FromArgb(192, 0, 0);
+            Exitbtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Exitbtn.ForeColor = Color.White;
+            Exitbtn.Location = new Point(1154, 0);
+            Exitbtn.Name = "Exitbtn";
+            Exitbtn.Size = new Size(51, 70);
+            Exitbtn.TabIndex = 13;
+            Exitbtn.Text = "X";
+            Exitbtn.UseVisualStyleBackColor = false;
+            Exitbtn.Click += Exitbtn_Click;
             // 
             // pictureBox1
             // 
@@ -109,41 +103,44 @@
             label1.TabIndex = 1;
             label1.Text = "FITNESS CENTER";
             // 
-            // button4
+            // resetbtn
             // 
-            button4.BackColor = Color.FromArgb(192, 0, 0);
-            button4.Font = new Font("Segoe UI", 12F);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(132, 528);
-            button4.Name = "button4";
-            button4.Size = new Size(119, 45);
-            button4.TabIndex = 87;
-            button4.Text = "Reset";
-            button4.UseVisualStyleBackColor = false;
+            resetbtn.BackColor = Color.FromArgb(192, 0, 0);
+            resetbtn.Font = new Font("Segoe UI", 12F);
+            resetbtn.ForeColor = Color.White;
+            resetbtn.Location = new Point(132, 528);
+            resetbtn.Name = "resetbtn";
+            resetbtn.Size = new Size(119, 45);
+            resetbtn.TabIndex = 87;
+            resetbtn.Text = "Reset";
+            resetbtn.UseVisualStyleBackColor = false;
+            resetbtn.Click += resetbtn_Click;
             // 
-            // button6
+            // Backbtn
             // 
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.Font = new Font("Segoe UI", 12F);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(56, 591);
-            button6.Name = "button6";
-            button6.Size = new Size(121, 45);
-            button6.TabIndex = 83;
-            button6.Text = "Back";
-            button6.UseVisualStyleBackColor = false;
+            Backbtn.BackColor = Color.FromArgb(192, 0, 0);
+            Backbtn.Font = new Font("Segoe UI", 12F);
+            Backbtn.ForeColor = Color.White;
+            Backbtn.Location = new Point(56, 591);
+            Backbtn.Name = "Backbtn";
+            Backbtn.Size = new Size(121, 45);
+            Backbtn.TabIndex = 83;
+            Backbtn.Text = "Back";
+            Backbtn.UseVisualStyleBackColor = false;
+            Backbtn.Click += Backbtn_Click;
             // 
-            // button5
+            // Paybtn
             // 
-            button5.BackColor = Color.FromArgb(192, 0, 0);
-            button5.Font = new Font("Segoe UI", 12F);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(12, 528);
-            button5.Name = "button5";
-            button5.Size = new Size(114, 45);
-            button5.TabIndex = 82;
-            button5.Text = "Pay";
-            button5.UseVisualStyleBackColor = false;
+            Paybtn.BackColor = Color.FromArgb(192, 0, 0);
+            Paybtn.Font = new Font("Segoe UI", 12F);
+            Paybtn.ForeColor = Color.White;
+            Paybtn.Location = new Point(12, 528);
+            Paybtn.Name = "Paybtn";
+            Paybtn.Size = new Size(114, 45);
+            Paybtn.TabIndex = 82;
+            Paybtn.Text = "Pay";
+            Paybtn.UseVisualStyleBackColor = false;
+            Paybtn.Click += Paybtn_Click;
             // 
             // label10
             // 
@@ -220,16 +217,6 @@
             label2.TabIndex = 76;
             label2.Text = "PAYMENT";
             // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(12, 375);
-            textBox2.Margin = new Padding(4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 39);
-            textBox2.TabIndex = 89;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -243,13 +230,13 @@
             label3.Text = "Member Name";
             label3.Click += label3_Click;
             // 
-            // dateTimePicker1
+            // PaymentDate
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(12, 279);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(257, 34);
-            dateTimePicker1.TabIndex = 90;
+            PaymentDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PaymentDate.Location = new Point(12, 279);
+            PaymentDate.Name = "PaymentDate";
+            PaymentDate.Size = new Size(257, 34);
+            PaymentDate.TabIndex = 90;
             // 
             // label4
             // 
@@ -263,15 +250,15 @@
             label4.TabIndex = 91;
             label4.Text = "Payment month";
             // 
-            // textBox3
+            // AmountTb
             // 
-            textBox3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(14, 468);
-            textBox3.Margin = new Padding(4);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(257, 39);
-            textBox3.TabIndex = 93;
+            AmountTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AmountTb.Location = new Point(14, 468);
+            AmountTb.Margin = new Padding(4);
+            AmountTb.Multiline = true;
+            AmountTb.Name = "AmountTb";
+            AmountTb.Size = new Size(257, 39);
+            AmountTb.TabIndex = 93;
             // 
             // label5
             // 
@@ -285,22 +272,86 @@
             label5.TabIndex = 92;
             label5.Text = "Amount";
             // 
+            // NameCB
+            // 
+            NameCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NameCB.FormattingEnabled = true;
+            NameCB.Items.AddRange(new object[] { "Male", "Female" });
+            NameCB.Location = new Point(14, 375);
+            NameCB.Margin = new Padding(4);
+            NameCB.Name = "NameCB";
+            NameCB.Size = new Size(259, 39);
+            NameCB.TabIndex = 94;
+            // 
+            // PaymentDGV
+            // 
+            PaymentDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            PaymentDGV.BackgroundColor = Color.White;
+            PaymentDGV.BorderStyle = BorderStyle.Fixed3D;
+            PaymentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            PaymentDGV.Location = new Point(350, 206);
+            PaymentDGV.Name = "PaymentDGV";
+            PaymentDGV.RowHeadersWidth = 51;
+            PaymentDGV.Size = new Size(782, 409);
+            PaymentDGV.TabIndex = 95;
+            // 
+            // SearchTb
+            // 
+            SearchTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SearchTb.Location = new Point(526, 160);
+            SearchTb.Margin = new Padding(4);
+            SearchTb.Multiline = true;
+            SearchTb.Name = "SearchTb";
+            SearchTb.Size = new Size(257, 39);
+            SearchTb.TabIndex = 96;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(192, 0, 0);
+            button4.Font = new Font("Segoe UI", 12F);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(802, 154);
+            button4.Name = "button4";
+            button4.Size = new Size(119, 45);
+            button4.TabIndex = 97;
+            button4.Text = "Search";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += Searchbtn_Click;
+            // 
+            // refreshbtn
+            // 
+            refreshbtn.BackColor = Color.FromArgb(192, 0, 0);
+            refreshbtn.Font = new Font("Segoe UI", 12F);
+            refreshbtn.ForeColor = Color.White;
+            refreshbtn.Location = new Point(947, 154);
+            refreshbtn.Name = "refreshbtn";
+            refreshbtn.Size = new Size(119, 45);
+            refreshbtn.TabIndex = 98;
+            refreshbtn.Text = "Refresh";
+            refreshbtn.UseVisualStyleBackColor = false;
+            refreshbtn.Click += refreshbtn_Click;
+            // 
             // Payment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1205, 663);
-            Controls.Add(textBox3);
+            Controls.Add(refreshbtn);
+            Controls.Add(button4);
+            Controls.Add(SearchTb);
+            Controls.Add(PaymentDGV);
+            Controls.Add(NameCB);
+            Controls.Add(AmountTb);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
+            Controls.Add(PaymentDate);
             Controls.Add(label3);
-            Controls.Add(dataGridView1);
             Controls.Add(panel1);
-            Controls.Add(button4);
-            Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(resetbtn);
+            Controls.Add(Backbtn);
+            Controls.Add(Paybtn);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(button3);
@@ -312,24 +363,22 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Payment";
             Load += Payment_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PaymentDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Panel panel1;
-        private Button button7;
+        private Button Exitbtn;
         private PictureBox pictureBox1;
         private Label label1;
-        private Button button4;
-        private Button button6;
-        private Button button5;
+        private Button resetbtn;
+        private Button Backbtn;
+        private Button Paybtn;
         private Label label10;
         private Label label9;
         private Button button3;
@@ -338,9 +387,14 @@
         private Label label2;
         private TextBox textBox2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker PaymentDate;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox AmountTb;
         private Label label5;
+        private ComboBox NameCB;
+        private DataGridView PaymentDGV;
+        private TextBox SearchTb;
+        private Button button4;
+        private Button refreshbtn;
     }
 }

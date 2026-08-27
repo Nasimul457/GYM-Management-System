@@ -60,8 +60,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkRed;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(363, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -97,7 +98,7 @@
             // 
             // NameTb
             // 
-            NameTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NameTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameTb.Location = new Point(27, 210);
             NameTb.Margin = new Padding(4);
             NameTb.Multiline = true;
@@ -120,7 +121,7 @@
             // 
             // PhoneTb
             // 
-            PhoneTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PhoneTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneTb.Location = new Point(27, 351);
             PhoneTb.Margin = new Padding(4);
             PhoneTb.Multiline = true;
@@ -142,7 +143,7 @@
             // 
             // AgeTb
             // 
-            AgeTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AgeTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AgeTb.Location = new Point(27, 487);
             AgeTb.Margin = new Padding(4);
             AgeTb.Multiline = true;
@@ -176,7 +177,7 @@
             // 
             // AmountTb
             // 
-            AmountTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AmountTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AmountTb.Location = new Point(605, 351);
             AmountTb.Margin = new Padding(4);
             AmountTb.Multiline = true;
@@ -198,7 +199,7 @@
             // 
             // GenderCB
             // 
-            GenderCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GenderCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GenderCB.FormattingEnabled = true;
             GenderCB.Items.AddRange(new object[] { "Male", "Female" });
             GenderCB.Location = new Point(605, 224);
@@ -209,13 +210,13 @@
             // 
             // TimingCB
             // 
-            TimingCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TimingCB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TimingCB.FormattingEnabled = true;
             TimingCB.Items.AddRange(new object[] { "06.00 am - 08:00 am", "08.00 am - 10:00 am", "06.00 am - 08:00 pm", "08.00 am - 10:00 pm" });
             TimingCB.Location = new Point(605, 477);
             TimingCB.Margin = new Padding(4);
             TimingCB.Name = "TimingCB";
-            TimingCB.Size = new Size(386, 39);
+            TimingCB.Size = new Size(386, 36);
             TimingCB.TabIndex = 17;
             TimingCB.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
@@ -361,6 +362,8 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1205, 663);
             Controls.Add(panel1);
             Controls.Add(BackBtn);
@@ -390,6 +393,7 @@
             Name = "AddMember";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddMember";
+            Load += AddMember_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

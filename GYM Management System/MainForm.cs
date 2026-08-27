@@ -37,24 +37,30 @@ namespace GYM_Management_System
             this.Hide();
         }
 
-        private void UpdateMember_Click(object sender, EventArgs e)
-        {
-            UpdateDelete update_delted = new UpdateDelete();
-            update_delted.Show();
-            this.Hide();
-        }
-
-        private void DeleteMember_Click(object sender, EventArgs e)
-        {
-            ViewMembers view = new ViewMembers();
-            view.Show();
-            this.Hide();
-        }
-
+       
         private void PaymentMember_Click(object sender, EventArgs e)
         {
             Payment pay = new Payment();
             pay.Show();
+            this.Hide();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void View_Member_Click(object sender, EventArgs e)
+        {
+            ViewMembers view_Member = new ViewMembers();
+            view_Member.Show();
+            this.Hide();
+        }
+
+        private void Update_Delete_Click(object sender, EventArgs e)
+        {
+            UpdateDelete upd = new UpdateDelete();
+            upd.Show();
             this.Hide();
         }
     }
