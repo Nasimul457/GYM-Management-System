@@ -96,10 +96,42 @@ namespace GYM_Management_System
 
         private void Backbtn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            MainForm main = new MainForm("Cashier", "");
+            main.Show();
             this.Hide();
         }
+
+        //private void Paybtn_Click(object sender, EventArgs e)
+        //{
+        //    if (NameCB.Text == "" || AmountTb.Text == "")
+        //    {
+        //        MessageBox.Show("Missing Information");
+        //    }
+        //    else
+        //    {
+        //        string paymentPeriod = PaymentDate.Value.Month.ToString() + PaymentDate.Value.Year.ToString();
+        //        con.Open();
+        //        SqlDataAdapter sda = new SqlDataAdapter("select count(*) from PaymentTbl where PMember='" + NameCB.SelectedValue?.ToString() + "'", con);
+        //        DataTable dt = new DataTable();
+        //        sda.Fill(dt);
+
+        //        if (dt.Rows[0][0].ToString() == "1")
+        //        {
+        //            MessageBox.Show("Already Paid for this Month");
+        //        }
+        //        else
+        //        {
+        //            string query = "insert into PaymentTbl values('" + paymentPeriod + "', '" + NameCB.SelectedValue?.ToString() + "', " + AmountTb.Text + ")";
+        //            SqlCommand cmd = new SqlCommand(query, con);
+        //            cmd.ExecuteNonQuery();
+        //            MessageBox.Show("Amount Paid Successfully");
+        //        }
+
+        //        con.Close();
+        //        Populate();
+        //        Reset_AllBoxes();
+        //    }
+        //}
 
         private void Paybtn_Click(object sender, EventArgs e)
         {
@@ -109,27 +141,45 @@ namespace GYM_Management_System
             }
             else
             {
-                string paymentPeriod = PaymentDate.Value.Month.ToString() + PaymentDate.Value.Year.ToString();
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select count(*) from PaymentTbl where PMember='" + NameCB.SelectedValue?.ToString() + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows[0][0].ToString() == "1")
+                try
                 {
-                    MessageBox.Show("Already Paid for this Month");
-                }
-                else
-                {
-                    string query = "insert into PaymentTbl values('" + paymentPeriod + "', '" + NameCB.SelectedValue?.ToString() + "', " + AmountTb.Text + ")";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Amount Paid Successfully");
-                }
 
-                con.Close();
-                Populate();
-                Reset_AllBoxes();
+                    string paymentPeriod = PaymentDate.Value.ToString("MMyyyy");
+
+                    con.Open();
+
+                    SqlCommand checkCmd = new SqlCommand("select count(*) from PaymentTbl where PMember=@MName and PMonth=@PPeriod", con);
+                    checkCmd.Parameters.AddWithValue("@MName", NameCB.SelectedValue?.ToString());
+                    checkCmd.Parameters.AddWithValue("@PPeriod", paymentPeriod);
+
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Already Paid for this Month!");
+                    }
+                    else
+                    {
+                        string query = "insert into PaymentTbl (PMonth, PMember, PAmount) values (@PPeriod, @MName, @PAmt)";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@PPeriod", paymentPeriod);
+                        cmd.Parameters.AddWithValue("@MName", NameCB.SelectedValue?.ToString());
+                        cmd.Parameters.AddWithValue("@PAmt", Convert.ToInt32(AmountTb.Text));
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Amount Paid Successfully");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Populate();
+                    Reset_AllBoxes();
+                }
             }
         }
 
@@ -144,5 +194,89 @@ namespace GYM_Management_System
             Populate();
             SearchTb.Text = "";
         }
+
+        int key = 0;
+
+        private void Updatebtn_Click(object sender, EventArgs e)
+        {
+            if (NameCB.Text == "" || AmountTb.Text == "")
+            {
+                MessageBox.Show("Select The Payment to Update");
+            }
+            else
+            {
+                try
+                {
+                    string paymentPeriod = PaymentDate.Value.ToString("MMyyyy");
+                    con.Open();
+                    string query = "update PaymentTbl set PMonth = @PPeriod, PMember = @MName, PAmount = @PAmt where PId = @PKey";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@PPeriod", paymentPeriod);
+                    cmd.Parameters.AddWithValue("@MName", NameCB.SelectedValue?.ToString());
+                    cmd.Parameters.AddWithValue("@PAmt", Convert.ToInt32(AmountTb.Text));
+                    cmd.Parameters.AddWithValue("@PKey", key);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Payment Updated Successfully");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Populate();
+                    Reset_AllBoxes();
+                    key = 0;
+                }
+            }
+        }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Select The Payment to Delete");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    string query = "delete from PaymentTbl where PId = @PKey";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@PKey", key);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Payment Deleted Successfully");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                    Populate();
+                    Reset_AllBoxes();
+                    key = 0; 
+                }
+            }
+        }
+
+        
+
+        private void PaymentDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = PaymentDGV.Rows[e.RowIndex];
+                key = Convert.ToInt32(row.Cells[0].Value?.ToString()); 
+                NameCB.Text = row.Cells[2].Value?.ToString();          
+                AmountTb.Text = row.Cells[3].Value?.ToString();        
+            }
+        }
     }
 }
+

@@ -1,6 +1,12 @@
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.exe
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.dll.config
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.deps.json
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.runtimeconfig.json
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.pdb
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Azure.Core.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Azure.Identity.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Bcl.Cryptography.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
@@ -9,6 +15,8 @@ C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Deb
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
@@ -16,8 +24,10 @@ C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Deb
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.ClientModel.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.Data.SqlClient.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.Memory.Data.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\de\Microsoft.Data.SqlClient.resources.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\es\Microsoft.Data.SqlClient.resources.dll
@@ -32,6 +42,7 @@ C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Deb
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
@@ -42,32 +53,30 @@ C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Deb
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.csproj.AssemblyReference.cache
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.AddMember.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.AdminNotice.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.Change_PasswordForm.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.LoginForm.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.MainForm.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.Payment.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.Properties.Resources.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.TrainerManagement.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.UpdateDelete.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.UserNoticeForm.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.UserPaymentForm.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.UserPlanForm.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.UserProfileForm.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.ViewMembers.resources
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.WorkoutDietForm.resources
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.csproj.GenerateResource.cache
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.AssemblyInfoInputs.cache
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.AssemblyInfo.cs
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.sourcelink.json
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Mana.3E4D548E.Up2Date
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\refint\GYM Management System.dll
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.pdb
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.dll.config
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.deps.json
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.runtimeconfig.json
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\GYM Management System.pdb
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\ref\GYM Management System.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Azure.Core.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Azure.Identity.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.ClientModel.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\bin\Debug\net10.0-windows\System.Memory.Data.dll
-C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM Management System.sourcelink.json
+C:\Users\LENOVO\source\repos\GYM Management System\GYM Management System\obj\Debug\net10.0-windows\GYM_Management_System.RegisterForm.resources

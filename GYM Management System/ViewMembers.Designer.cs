@@ -63,7 +63,7 @@
             dataGridViewCellStyle1.ForeColor = Color.DarkRed;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             MembersDGV.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            MembersDGV.Size = new Size(1417, 390);
+            MembersDGV.Size = new Size(1466, 390);
             MembersDGV.TabIndex = 73;
             // 
             // panel1
@@ -74,7 +74,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1467, 70);
+            panel1.Size = new Size(1520, 70);
             panel1.TabIndex = 72;
             // 
             // pictureBox1
@@ -227,9 +227,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackColor = Color.LightSeaGreen;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1467, 656);
+            ClientSize = new Size(1520, 656);
             Controls.Add(refreshBtn);
             Controls.Add(SearchTb);
             Controls.Add(MembersDGV);

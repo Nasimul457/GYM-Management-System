@@ -13,15 +13,19 @@ namespace GYM_Management_System
             ApplicationConfiguration.Initialize();
              Application.Run(new LoginForm());
 
-            // Application.Run(new MainForm());
+            //Application.Run(new MainForm());
             //Application.Run(new AddMember());
             // Application.Run(new ViewMembers());
 
             // Application.Run(new UpdateDelete());
 
-            //Application.Run(new Payment());
-           // Application.Run(new ViewMembers());
+            // Application.Run(new Payment());
+            // Application.Run(new ViewMembers());
+            // Application.Run(new UserProfileForm());
+            //Application.Run(new UserPlanForm());
+            // Application.Run(new TrainerManagement());
 
+            //Application.Run(new WorkoutDietForm());
         }
     }
 }

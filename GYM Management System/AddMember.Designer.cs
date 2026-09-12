@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             NameTb = new TextBox();
@@ -51,31 +50,23 @@
             ResetBtn = new Button();
             BackBtn = new Button();
             panel1 = new Panel();
-            ExitBtn = new Button();
             pictureBox1 = new PictureBox();
+            label11 = new Label();
+            cmbTrainer = new ComboBox();
+            label1 = new Label();
+            HeightTb = new TextBox();
+            label12 = new Label();
+            WeightTb = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(363, 9);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(287, 46);
-            label1.TabIndex = 1;
-            label1.Text = "FITNESS CENTER";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DarkRed;
-            label2.Location = new Point(409, 85);
+            label2.Location = new Point(422, 20);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(228, 31);
@@ -103,7 +94,7 @@
             NameTb.Margin = new Padding(4);
             NameTb.Multiline = true;
             NameTb.Name = "NameTb";
-            NameTb.Size = new Size(386, 39);
+            NameTb.Size = new Size(273, 39);
             NameTb.TabIndex = 5;
             NameTb.TextChanged += textBox1_TextChanged;
             // 
@@ -126,7 +117,7 @@
             PhoneTb.Margin = new Padding(4);
             PhoneTb.Multiline = true;
             PhoneTb.Name = "PhoneTb";
-            PhoneTb.Size = new Size(386, 41);
+            PhoneTb.Size = new Size(273, 41);
             PhoneTb.TabIndex = 7;
             // 
             // label5
@@ -148,7 +139,7 @@
             AgeTb.Margin = new Padding(4);
             AgeTb.Multiline = true;
             AgeTb.Name = "AgeTb";
-            AgeTb.Size = new Size(386, 38);
+            AgeTb.Size = new Size(280, 38);
             AgeTb.TabIndex = 9;
             // 
             // label6
@@ -156,7 +147,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 0, 192);
-            label6.Location = new Point(605, 150);
+            label6.Location = new Point(388, 150);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(112, 38);
@@ -168,7 +159,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(0, 0, 192);
-            label7.Location = new Point(605, 291);
+            label7.Location = new Point(388, 291);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(245, 38);
@@ -178,11 +169,11 @@
             // AmountTb
             // 
             AmountTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AmountTb.Location = new Point(605, 351);
+            AmountTb.Location = new Point(388, 351);
             AmountTb.Margin = new Padding(4);
             AmountTb.Multiline = true;
             AmountTb.Name = "AmountTb";
-            AmountTb.Size = new Size(386, 41);
+            AmountTb.Size = new Size(276, 41);
             AmountTb.TabIndex = 13;
             // 
             // label8
@@ -190,7 +181,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(0, 0, 192);
-            label8.Location = new Point(605, 424);
+            label8.Location = new Point(388, 436);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(109, 38);
@@ -202,21 +193,21 @@
             GenderCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GenderCB.FormattingEnabled = true;
             GenderCB.Items.AddRange(new object[] { "Male", "Female" });
-            GenderCB.Location = new Point(605, 224);
+            GenderCB.Location = new Point(378, 210);
             GenderCB.Margin = new Padding(4);
             GenderCB.Name = "GenderCB";
-            GenderCB.Size = new Size(386, 39);
+            GenderCB.Size = new Size(272, 39);
             GenderCB.TabIndex = 16;
             // 
             // TimingCB
             // 
             TimingCB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TimingCB.FormattingEnabled = true;
-            TimingCB.Items.AddRange(new object[] { "06.00 am - 08:00 am", "08.00 am - 10:00 am", "06.00 am - 08:00 pm", "08.00 am - 10:00 pm" });
-            TimingCB.Location = new Point(605, 477);
+            TimingCB.Items.AddRange(new object[] { "06.00 am - 08:00 am", "08.00 am - 10:00 am", "06.00 pm - 08:00 pm", "08.00 pm - 10:00 pm" });
+            TimingCB.Location = new Point(388, 489);
             TimingCB.Margin = new Padding(4);
             TimingCB.Name = "TimingCB";
-            TimingCB.Size = new Size(386, 36);
+            TimingCB.Size = new Size(276, 36);
             TimingCB.TabIndex = 17;
             TimingCB.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
@@ -324,28 +315,14 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(ExitBtn);
+            panel1.BackColor = Color.MediumSeaGreen;
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1205, 70);
             panel1.TabIndex = 26;
-            // 
-            // ExitBtn
-            // 
-            ExitBtn.BackColor = Color.FromArgb(192, 0, 0);
-            ExitBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ExitBtn.ForeColor = Color.White;
-            ExitBtn.Location = new Point(1154, 0);
-            ExitBtn.Name = "ExitBtn";
-            ExitBtn.Size = new Size(51, 70);
-            ExitBtn.TabIndex = 13;
-            ExitBtn.Text = "X";
-            ExitBtn.UseVisualStyleBackColor = false;
-            ExitBtn.Click += ExitBtn_Click;
             // 
             // pictureBox1
             // 
@@ -357,14 +334,87 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.FromArgb(0, 0, 192);
+            label11.Location = new Point(732, 150);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(194, 38);
+            label11.TabIndex = 27;
+            label11.Text = "Select Trainer";
+            // 
+            // cmbTrainer
+            // 
+            cmbTrainer.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbTrainer.FormattingEnabled = true;
+            cmbTrainer.Items.AddRange(new object[] { "Male", "Female" });
+            cmbTrainer.Location = new Point(732, 210);
+            cmbTrainer.Margin = new Padding(4);
+            cmbTrainer.Name = "cmbTrainer";
+            cmbTrainer.Size = new Size(272, 39);
+            cmbTrainer.TabIndex = 28;
+            cmbTrainer.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 0, 192);
+            label1.Location = new Point(732, 300);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(106, 38);
+            label1.TabIndex = 29;
+            label1.Text = "Height";
+            // 
+            // HeightTb
+            // 
+            HeightTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HeightTb.Location = new Point(732, 351);
+            HeightTb.Margin = new Padding(4);
+            HeightTb.Multiline = true;
+            HeightTb.Name = "HeightTb";
+            HeightTb.Size = new Size(276, 41);
+            HeightTb.TabIndex = 30;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(0, 0, 192);
+            label12.Location = new Point(732, 436);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(112, 38);
+            label12.TabIndex = 31;
+            label12.Text = "Weight";
+            // 
+            // WeightTb
+            // 
+            WeightTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WeightTb.Location = new Point(732, 478);
+            WeightTb.Margin = new Padding(4);
+            WeightTb.Multiline = true;
+            WeightTb.Name = "WeightTb";
+            WeightTb.Size = new Size(276, 41);
+            WeightTb.TabIndex = 32;
+            // 
             // AddMember
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackColor = Color.MediumTurquoise;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1205, 663);
+            Controls.Add(WeightTb);
+            Controls.Add(label12);
+            Controls.Add(HeightTb);
+            Controls.Add(label1);
+            Controls.Add(cmbTrainer);
+            Controls.Add(label11);
             Controls.Add(panel1);
             Controls.Add(BackBtn);
             Controls.Add(ResetBtn);
@@ -386,9 +436,8 @@
             Controls.Add(label4);
             Controls.Add(NameTb);
             Controls.Add(label3);
-            Controls.Add(label2);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(4);
             Name = "AddMember";
             StartPosition = FormStartPosition.CenterScreen;
@@ -402,8 +451,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private TextBox NameTb;
@@ -426,7 +473,12 @@
         private Button ResetBtn;
         private Button BackBtn;
         private Panel panel1;
-        private Button ExitBtn;
         private PictureBox pictureBox1;
+        private Label label11;
+        private ComboBox cmbTrainer;
+        private Label label1;
+        private TextBox HeightTb;
+        private Label label12;
+        private TextBox WeightTb;
     }
 }

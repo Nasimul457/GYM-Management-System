@@ -22,8 +22,8 @@ namespace GYM_Management_System
         private void Populate()
         {
             con.Open();
-            string query = "select * from MemberTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            //string query = "select * from MemberTbl";
+            string query = "SELECT M.Mid, M.MName, M.MPhone, M.MGen, M.MAge, M.MAmount, M.MTiming, T.TrainerName, M.MHeight, M.MWeight FROM MemberTbl M LEFT JOIN TrainerTbl T ON M.TrainerId = T.TrainerId"; SqlDataAdapter sda = new SqlDataAdapter(query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
@@ -38,8 +38,8 @@ namespace GYM_Management_System
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            MainForm mainFrom = new MainForm();
-            mainFrom.Show();
+            MainForm main = new MainForm("Admin", "");
+            main.Show();
             this.Hide();
         }
 
@@ -51,7 +51,7 @@ namespace GYM_Management_System
         private void Search_By_Name()
         {
             con.Open();
-            string query = "select * from MemberTbl where MName = '" + SearchTb.Text + "'";
+            string query = "SELECT M.Mid, M.MName, M.MPhone, M.MGen, M.MAge, M.MAmount, M.MTiming, T.TrainerName, M.MHeight, M.MWeight FROM MemberTbl M LEFT JOIN TrainerTbl T ON M.TrainerId = T.TrainerId WHERE M.MName = '" + SearchTb.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();

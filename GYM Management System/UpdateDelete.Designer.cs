@@ -30,7 +30,6 @@
         {
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            button7 = new Button();
             label1 = new Label();
             BackBtn = new Button();
             ResetBtn = new Button();
@@ -56,6 +55,12 @@
             MembersDGV = new DataGridView();
             label11 = new Label();
             Deletebtn = new Button();
+            label12 = new Label();
+            TrainerCB = new ComboBox();
+            label13 = new Label();
+            HeightTb = new TextBox();
+            label14 = new Label();
+            WeightTb = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MembersDGV).BeginInit();
@@ -74,26 +79,13 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(button7);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1412, 70);
+            panel1.Size = new Size(1575, 70);
             panel1.TabIndex = 48;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(192, 0, 0);
-            button7.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(1358, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(51, 70);
-            button7.TabIndex = 13;
-            button7.Text = "X";
-            button7.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -113,7 +105,7 @@
             BackBtn.BackColor = Color.FromArgb(192, 0, 0);
             BackBtn.Font = new Font("Segoe UI", 12F);
             BackBtn.ForeColor = Color.White;
-            BackBtn.Location = new Point(984, 606);
+            BackBtn.Location = new Point(1417, 702);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(151, 45);
             BackBtn.TabIndex = 47;
@@ -126,7 +118,7 @@
             ResetBtn.BackColor = Color.FromArgb(192, 0, 0);
             ResetBtn.Font = new Font("Segoe UI", 12F);
             ResetBtn.ForeColor = Color.White;
-            ResetBtn.Location = new Point(795, 606);
+            ResetBtn.Location = new Point(1264, 702);
             ResetBtn.Name = "ResetBtn";
             ResetBtn.Size = new Size(137, 45);
             ResetBtn.TabIndex = 46;
@@ -139,7 +131,7 @@
             UpdateMemberBtn.BackColor = Color.FromArgb(192, 0, 0);
             UpdateMemberBtn.Font = new Font("Segoe UI", 12F);
             UpdateMemberBtn.ForeColor = Color.White;
-            UpdateMemberBtn.Location = new Point(450, 606);
+            UpdateMemberBtn.Location = new Point(952, 702);
             UpdateMemberBtn.Name = "UpdateMemberBtn";
             UpdateMemberBtn.Size = new Size(130, 45);
             UpdateMemberBtn.TabIndex = 45;
@@ -365,7 +357,7 @@
             MembersDGV.Location = new Point(305, 138);
             MembersDGV.Name = "MembersDGV";
             MembersDGV.RowHeadersWidth = 51;
-            MembersDGV.Size = new Size(1095, 453);
+            MembersDGV.Size = new Size(1244, 453);
             MembersDGV.TabIndex = 49;
             MembersDGV.CellMouseClick += MembersDGV_CellMouseClick;
             // 
@@ -386,7 +378,7 @@
             Deletebtn.BackColor = Color.FromArgb(192, 0, 0);
             Deletebtn.Font = new Font("Segoe UI", 12F);
             Deletebtn.ForeColor = Color.White;
-            Deletebtn.Location = new Point(618, 606);
+            Deletebtn.Location = new Point(1119, 702);
             Deletebtn.Name = "Deletebtn";
             Deletebtn.Size = new Size(130, 45);
             Deletebtn.TabIndex = 51;
@@ -394,13 +386,86 @@
             Deletebtn.UseVisualStyleBackColor = false;
             Deletebtn.Click += Deletebtn_Click;
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(0, 0, 192);
+            label12.Location = new Point(15, 650);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(140, 28);
+            label12.TabIndex = 52;
+            label12.Text = "Trainer Name";
+            // 
+            // TrainerCB
+            // 
+            TrainerCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TrainerCB.FormattingEnabled = true;
+            TrainerCB.Items.AddRange(new object[] { "Male", "Female" });
+            TrainerCB.Location = new Point(11, 694);
+            TrainerCB.Margin = new Padding(4);
+            TrainerCB.Name = "TrainerCB";
+            TrainerCB.Size = new Size(259, 39);
+            TrainerCB.TabIndex = 53;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(0, 0, 192);
+            label13.Location = new Point(339, 618);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(76, 28);
+            label13.TabIndex = 54;
+            label13.Text = "Height";
+            // 
+            // HeightTb
+            // 
+            HeightTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HeightTb.Location = new Point(339, 653);
+            HeightTb.Margin = new Padding(4);
+            HeightTb.Multiline = true;
+            HeightTb.Name = "HeightTb";
+            HeightTb.Size = new Size(199, 25);
+            HeightTb.TabIndex = 55;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(0, 0, 192);
+            label14.Location = new Point(620, 618);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(80, 28);
+            label14.TabIndex = 56;
+            label14.Text = "Weight";
+            // 
+            // WeightTb
+            // 
+            WeightTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WeightTb.Location = new Point(620, 650);
+            WeightTb.Margin = new Padding(4);
+            WeightTb.Multiline = true;
+            WeightTb.Name = "WeightTb";
+            WeightTb.Size = new Size(199, 28);
+            WeightTb.TabIndex = 57;
+            // 
             // UpdateDelete
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackColor = Color.LightSeaGreen;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1412, 663);
+            ClientSize = new Size(1575, 759);
+            Controls.Add(WeightTb);
+            Controls.Add(label14);
+            Controls.Add(HeightTb);
+            Controls.Add(label13);
+            Controls.Add(TrainerCB);
+            Controls.Add(label12);
             Controls.Add(Deletebtn);
             Controls.Add(label11);
             Controls.Add(MembersDGV);
@@ -426,7 +491,7 @@
             Controls.Add(NameTb);
             Controls.Add(label3);
             Controls.Add(label2);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "UpdateDelete";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UpdateDelete";
@@ -443,7 +508,6 @@
 
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Button button7;
         private Label label1;
         private Button BackBtn;
         private Button ResetBtn;
@@ -469,5 +533,11 @@
         private DataGridView MembersDGV;
         private Label label11;
         private Button Deletebtn;
+        private Label label12;
+        private ComboBox TrainerCB;
+        private Label label13;
+        private TextBox HeightTb;
+        private Label label14;
+        private TextBox WeightTb;
     }
 }

@@ -38,6 +38,8 @@
             pictureBox3 = new PictureBox();
             LoginBtn = new Button();
             ResetBtn = new Button();
+            ForgottenPasswordBtn = new Button();
+            Registerbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -48,7 +50,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkRed;
-            label1.Location = new Point(133, 19);
+            label1.Location = new Point(266, 52);
             label1.Name = "label1";
             label1.Size = new Size(436, 46);
             label1.TabIndex = 0;
@@ -58,7 +60,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Gym;
-            pictureBox1.Location = new Point(12, 106);
+            pictureBox1.Location = new Point(116, 139);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(175, 164);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -69,7 +71,7 @@
             // 
             UsernameTb.Cursor = Cursors.IBeam;
             UsernameTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UsernameTb.Location = new Point(237, 124);
+            UsernameTb.Location = new Point(370, 157);
             UsernameTb.Multiline = true;
             UsernameTb.Name = "UsernameTb";
             UsernameTb.Size = new Size(262, 40);
@@ -80,7 +82,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(237, 83);
+            label2.Location = new Point(370, 116);
             label2.Name = "label2";
             label2.Size = new Size(148, 38);
             label2.TabIndex = 3;
@@ -89,7 +91,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.username;
-            pictureBox2.Location = new Point(505, 124);
+            pictureBox2.Location = new Point(638, 157);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(64, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -100,7 +102,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(237, 189);
+            label3.Location = new Point(370, 222);
             label3.Name = "label3";
             label3.Size = new Size(139, 38);
             label3.TabIndex = 5;
@@ -109,7 +111,7 @@
             // PasswordTb
             // 
             PasswordTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PasswordTb.Location = new Point(237, 230);
+            PasswordTb.Location = new Point(370, 263);
             PasswordTb.Multiline = true;
             PasswordTb.Name = "PasswordTb";
             PasswordTb.PasswordChar = '*';
@@ -119,7 +121,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.password;
-            pictureBox3.Location = new Point(505, 230);
+            pictureBox3.Location = new Point(638, 263);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(69, 40);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -131,7 +133,7 @@
             LoginBtn.BackColor = Color.FromArgb(192, 0, 0);
             LoginBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginBtn.ForeColor = Color.White;
-            LoginBtn.Location = new Point(237, 306);
+            LoginBtn.Location = new Point(392, 426);
             LoginBtn.Name = "LoginBtn";
             LoginBtn.Size = new Size(172, 45);
             LoginBtn.TabIndex = 8;
@@ -144,7 +146,7 @@
             ResetBtn.BackColor = Color.FromArgb(192, 0, 0);
             ResetBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ResetBtn.ForeColor = Color.White;
-            ResetBtn.Location = new Point(442, 306);
+            ResetBtn.Location = new Point(119, 426);
             ResetBtn.Name = "ResetBtn";
             ResetBtn.Size = new Size(172, 45);
             ResetBtn.TabIndex = 9;
@@ -152,13 +154,41 @@
             ResetBtn.UseVisualStyleBackColor = false;
             ResetBtn.Click += ResetBtn_Click;
             // 
+            // ForgottenPasswordBtn
+            // 
+            ForgottenPasswordBtn.BackColor = Color.FromArgb(192, 0, 0);
+            ForgottenPasswordBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ForgottenPasswordBtn.ForeColor = Color.White;
+            ForgottenPasswordBtn.Location = new Point(638, 426);
+            ForgottenPasswordBtn.Name = "ForgottenPasswordBtn";
+            ForgottenPasswordBtn.Size = new Size(265, 45);
+            ForgottenPasswordBtn.TabIndex = 12;
+            ForgottenPasswordBtn.Text = "Reset Password";
+            ForgottenPasswordBtn.UseVisualStyleBackColor = false;
+            ForgottenPasswordBtn.Click += ForgottenPasswordBtn_Click;
+            // 
+            // Registerbtn
+            // 
+            Registerbtn.BackColor = Color.Fuchsia;
+            Registerbtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Registerbtn.ForeColor = Color.White;
+            Registerbtn.Location = new Point(318, 492);
+            Registerbtn.Name = "Registerbtn";
+            Registerbtn.Size = new Size(416, 45);
+            Registerbtn.TabIndex = 13;
+            Registerbtn.Text = "Don't have an Account? Register";
+            Registerbtn.UseVisualStyleBackColor = false;
+            Registerbtn.Click += Registerbtn_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.LightSeaGreen;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1048, 549);
+            Controls.Add(Registerbtn);
+            Controls.Add(ForgottenPasswordBtn);
             Controls.Add(ResetBtn);
             Controls.Add(LoginBtn);
             Controls.Add(pictureBox3);
@@ -193,5 +223,7 @@
         private PictureBox pictureBox3;
         private Button LoginBtn;
         private Button ResetBtn;
+        private Button ForgottenPasswordBtn;
+        private Button Registerbtn;
     }
 }

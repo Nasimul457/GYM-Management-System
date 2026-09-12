@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            Exitbtn = new Button();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
             resetbtn = new Button();
             Backbtn = new Button();
             Paybtn = new Button();
@@ -51,6 +49,8 @@
             SearchTb = new TextBox();
             button4 = new Button();
             refreshbtn = new Button();
+            Updatebtn = new Button();
+            Deletebtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PaymentDGV).BeginInit();
@@ -58,28 +58,14 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(Exitbtn);
+            panel1.BackColor = Color.Gray;
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1205, 70);
+            panel1.Size = new Size(1202, 70);
             panel1.TabIndex = 84;
-            // 
-            // Exitbtn
-            // 
-            Exitbtn.BackColor = Color.FromArgb(192, 0, 0);
-            Exitbtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Exitbtn.ForeColor = Color.White;
-            Exitbtn.Location = new Point(1154, 0);
-            Exitbtn.Name = "Exitbtn";
-            Exitbtn.Size = new Size(51, 70);
-            Exitbtn.TabIndex = 13;
-            Exitbtn.Text = "X";
-            Exitbtn.UseVisualStyleBackColor = false;
-            Exitbtn.Click += Exitbtn_Click;
             // 
             // pictureBox1
             // 
@@ -91,24 +77,12 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(363, 9);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(287, 46);
-            label1.TabIndex = 1;
-            label1.Text = "FITNESS CENTER";
-            // 
             // resetbtn
             // 
             resetbtn.BackColor = Color.FromArgb(192, 0, 0);
             resetbtn.Font = new Font("Segoe UI", 12F);
             resetbtn.ForeColor = Color.White;
-            resetbtn.Location = new Point(132, 528);
+            resetbtn.Location = new Point(150, 502);
             resetbtn.Name = "resetbtn";
             resetbtn.Size = new Size(119, 45);
             resetbtn.TabIndex = 87;
@@ -121,7 +95,7 @@
             Backbtn.BackColor = Color.FromArgb(192, 0, 0);
             Backbtn.Font = new Font("Segoe UI", 12F);
             Backbtn.ForeColor = Color.White;
-            Backbtn.Location = new Point(56, 591);
+            Backbtn.Location = new Point(16, 606);
             Backbtn.Name = "Backbtn";
             Backbtn.Size = new Size(121, 45);
             Backbtn.TabIndex = 83;
@@ -134,7 +108,7 @@
             Paybtn.BackColor = Color.FromArgb(192, 0, 0);
             Paybtn.Font = new Font("Segoe UI", 12F);
             Paybtn.ForeColor = Color.White;
-            Paybtn.Location = new Point(12, 528);
+            Paybtn.Location = new Point(23, 502);
             Paybtn.Name = "Paybtn";
             Paybtn.Size = new Size(114, 45);
             Paybtn.TabIndex = 82;
@@ -210,7 +184,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DarkRed;
-            label2.Location = new Point(440, 73);
+            label2.Location = new Point(457, 9);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(179, 46);
@@ -222,7 +196,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(0, 0, 192);
-            label3.Location = new Point(14, 343);
+            label3.Location = new Point(16, 266);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(153, 28);
@@ -233,7 +207,7 @@
             // PaymentDate
             // 
             PaymentDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PaymentDate.Location = new Point(12, 279);
+            PaymentDate.Location = new Point(12, 215);
             PaymentDate.Name = "PaymentDate";
             PaymentDate.Size = new Size(257, 34);
             PaymentDate.TabIndex = 90;
@@ -243,7 +217,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(0, 0, 192);
-            label4.Location = new Point(14, 236);
+            label4.Location = new Point(14, 162);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(163, 28);
@@ -253,7 +227,7 @@
             // AmountTb
             // 
             AmountTb.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AmountTb.Location = new Point(14, 468);
+            AmountTb.Location = new Point(12, 429);
             AmountTb.Margin = new Padding(4);
             AmountTb.Multiline = true;
             AmountTb.Name = "AmountTb";
@@ -265,7 +239,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(0, 0, 192);
-            label5.Location = new Point(16, 436);
+            label5.Location = new Point(14, 380);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(88, 28);
@@ -277,7 +251,7 @@
             NameCB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameCB.FormattingEnabled = true;
             NameCB.Items.AddRange(new object[] { "Male", "Female" });
-            NameCB.Location = new Point(14, 375);
+            NameCB.Location = new Point(14, 318);
             NameCB.Margin = new Padding(4);
             NameCB.Name = "NameCB";
             NameCB.Size = new Size(259, 39);
@@ -289,16 +263,17 @@
             PaymentDGV.BackgroundColor = Color.White;
             PaymentDGV.BorderStyle = BorderStyle.Fixed3D;
             PaymentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            PaymentDGV.Location = new Point(350, 206);
+            PaymentDGV.Location = new Point(353, 185);
             PaymentDGV.Name = "PaymentDGV";
             PaymentDGV.RowHeadersWidth = 51;
             PaymentDGV.Size = new Size(782, 409);
             PaymentDGV.TabIndex = 95;
+            PaymentDGV.CellClick += PaymentDGV_CellClick;
             // 
             // SearchTb
             // 
             SearchTb.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SearchTb.Location = new Point(526, 160);
+            SearchTb.Location = new Point(528, 139);
             SearchTb.Margin = new Padding(4);
             SearchTb.Multiline = true;
             SearchTb.Name = "SearchTb";
@@ -310,7 +285,7 @@
             button4.BackColor = Color.FromArgb(192, 0, 0);
             button4.Font = new Font("Segoe UI", 12F);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(802, 154);
+            button4.Location = new Point(802, 133);
             button4.Name = "button4";
             button4.Size = new Size(119, 45);
             button4.TabIndex = 97;
@@ -323,7 +298,7 @@
             refreshbtn.BackColor = Color.FromArgb(192, 0, 0);
             refreshbtn.Font = new Font("Segoe UI", 12F);
             refreshbtn.ForeColor = Color.White;
-            refreshbtn.Location = new Point(947, 154);
+            refreshbtn.Location = new Point(943, 133);
             refreshbtn.Name = "refreshbtn";
             refreshbtn.Size = new Size(119, 45);
             refreshbtn.TabIndex = 98;
@@ -331,13 +306,41 @@
             refreshbtn.UseVisualStyleBackColor = false;
             refreshbtn.Click += refreshbtn_Click;
             // 
+            // Updatebtn
+            // 
+            Updatebtn.BackColor = Color.FromArgb(192, 0, 0);
+            Updatebtn.Font = new Font("Segoe UI", 12F);
+            Updatebtn.ForeColor = Color.White;
+            Updatebtn.Location = new Point(177, 606);
+            Updatebtn.Name = "Updatebtn";
+            Updatebtn.Size = new Size(119, 45);
+            Updatebtn.TabIndex = 99;
+            Updatebtn.Text = "Update";
+            Updatebtn.UseVisualStyleBackColor = false;
+            Updatebtn.Click += Updatebtn_Click;
+            // 
+            // Deletebtn
+            // 
+            Deletebtn.BackColor = Color.FromArgb(192, 0, 0);
+            Deletebtn.Font = new Font("Segoe UI", 12F);
+            Deletebtn.ForeColor = Color.White;
+            Deletebtn.Location = new Point(353, 606);
+            Deletebtn.Name = "Deletebtn";
+            Deletebtn.Size = new Size(119, 45);
+            Deletebtn.TabIndex = 100;
+            Deletebtn.Text = "Delete";
+            Deletebtn.UseVisualStyleBackColor = false;
+            Deletebtn.Click += Deletebtn_Click;
+            // 
             // Payment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.pngtree_a_fully_equipped_gym_with_dumbbells_weight_machines_and_cardio_equipment_image_16843660__1_;
+            BackColor = Color.LightSeaGreen;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1205, 663);
+            ClientSize = new Size(1202, 663);
+            Controls.Add(Deletebtn);
+            Controls.Add(Updatebtn);
             Controls.Add(refreshbtn);
             Controls.Add(button4);
             Controls.Add(SearchTb);
@@ -357,8 +360,7 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label2);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Payment";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Payment";
@@ -373,9 +375,7 @@
 
         #endregion
         private Panel panel1;
-        private Button Exitbtn;
         private PictureBox pictureBox1;
-        private Label label1;
         private Button resetbtn;
         private Button Backbtn;
         private Button Paybtn;
@@ -396,5 +396,7 @@
         private TextBox SearchTb;
         private Button button4;
         private Button refreshbtn;
+        private Button Updatebtn;
+        private Button Deletebtn;
     }
 }

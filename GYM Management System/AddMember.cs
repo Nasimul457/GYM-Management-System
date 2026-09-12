@@ -41,7 +41,7 @@ namespace GYM_Management_System
 
         private void AddMemberBtn_Click(object sender, EventArgs e)
         {
-            if (NameTb.Text == "" || PhoneTb.Text == "" || AmountTb.Text == "" || AgeTb.Text == "")
+            if (NameTb.Text == "" || PhoneTb.Text == "" || AmountTb.Text == "" || AgeTb.Text == "" || cmbTrainer.Text == "" || HeightTb.Text == "" || WeightTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -51,7 +51,7 @@ namespace GYM_Management_System
                 try
                 {
                     con.Open();
-                    string query = "insert into MemberTbl(MName, MPhone, MGen, MAge, MAmount, MTiming) values('" + NameTb.Text + "','" + PhoneTb.Text + "','" + GenderCB.Text + "','" + AgeTb.Text + "','" + AmountTb.Text + "','" + TimingCB.Text + "')";
+                    string query = "insert into MemberTbl(MName, MPhone, MGen, MAge, MAmount, MTiming, TrainerId, MHeight, MWeight) values('" + NameTb.Text + "','" + PhoneTb.Text + "','" + GenderCB.Text + "','" + AgeTb.Text + "','" + AmountTb.Text + "','" + TimingCB.Text + "','" + cmbTrainer.SelectedValue + "','" + HeightTb.Text + "','" + WeightTb.Text + "')"; 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Member Successfully Added");
@@ -84,6 +84,8 @@ namespace GYM_Management_System
             PhoneTb.Text = "";
             AgeTb.Text = "";
             AmountTb.Text = "";
+            HeightTb.Text = ""; 
+            WeightTb.Text = ""; 
             GenderCB.SelectedIndex = -1;
             TimingCB.SelectedIndex = -1;
         }
@@ -95,12 +97,43 @@ namespace GYM_Management_System
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            MainForm mainFrom = new MainForm();
-            mainFrom.Show();
+            MainForm main = new MainForm("Admin", "");
+            main.Show();
             this.Hide();
         }
 
+        private void FillTrainer()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PKE8D82\SQLEXPRESS02;Initial Catalog=GYMDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                con.Open();
+                string query = "SELECT * FROM TrainerTbl";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader rdr;
+                rdr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("TrainerName", typeof(string));
+                dt.Load(rdr);
+
+              
+                cmbTrainer.ValueMember = "TrainerId"; 
+                cmbTrainer.DisplayMember = "TrainerName";
+                cmbTrainer.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
         private void AddMember_Load_1(object sender, EventArgs e)
+        {
+            FillTrainer();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

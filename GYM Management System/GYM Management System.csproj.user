@@ -4,6 +4,12 @@
     <Compile Update="AddMember.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AdminNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Change PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -13,10 +19,31 @@
     <Compile Update="Payment.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TrainerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UpdateDelete.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WorkoutDietForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
